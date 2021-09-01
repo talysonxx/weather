@@ -2,7 +2,7 @@ console.log('Working!')
 
 if ('geolocation' in navigator) {
   // it is compatible
-  console.log('Great')
+  console.log("It's compatible")
 
   const apiKey = '9cf4f6d4e99e0075395476ce7c2f1aa7'
 
@@ -103,5 +103,7 @@ if ('geolocation' in navigator) {
   }
 
 } else {
-  console.log("I'm sorry, but your browser does not support this function.")
+  alert("I'm sorry, but your browser does not support this function.")
+  const pDevice = getElementById('device-info')
+  pDevice.innerHTML = "I'm sorry, but your browser does not support this function."
 }
