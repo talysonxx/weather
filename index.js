@@ -25,7 +25,7 @@ if ('geolocation' in navigator) {
   function callBackError({code, message}) {
     console.log('Error code:', code)
     console.log('Message:', message)
-    pDevice.innerHTML = `Error code: ${code} <br/> Message: ${message}`
+    pDevice.innerHTML = `Error code: ${code} <br/> Message: ${message} </br> Please, turn on the localization and allowed this site.`
   }
   
   // primisses functions
