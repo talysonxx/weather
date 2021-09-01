@@ -8,9 +8,7 @@
 }
 /* import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
-/* font-family: 'Roboto Mono', monospace; */
 body {
-  /* background-color: #102540; */
   background-color: #f2f2f2;
 }
 main {
@@ -68,9 +66,14 @@ header {
 }
 
 /* responsive */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   main {
     max-width: 70%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  main {
+    max-width: 75%;
   }
 }
 @media only screen and (max-width: 550px) {
