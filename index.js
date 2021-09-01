@@ -10,6 +10,8 @@ if ('geolocation' in navigator) {
 
   const apiKey = '9cf4f6d4e99e0075395476ce7c2f1aa7'
 
+  const date = new Date()
+
   // get html elements
   const h1City = document.getElementById('city')
   const pDescription = document.getElementById('weather-description')
@@ -86,6 +88,11 @@ if ('geolocation' in navigator) {
   function convertMeterToKm(meter) { 
     return (meter * 3.6).toFixed(2).replace('.', ',')
   }
+  function convertMonth(month) {
+    const monthString = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+
+    return monthString[month - 1]
+  }
 
   // watherFunction
   function weather(data) {
@@ -112,6 +119,9 @@ if ('geolocation' in navigator) {
     spans[7].innerHTML = `Direction: ${convertDegToCard(deg)}`
     spans[8].innerHTML = `Longitude: ${data.coord.lon}` 
     spans[9].innerHTML = `Latitude: ${data.coord.lat}`
+
+    spans[10].innerHTML = `${date.getDay()}, ${convertMonth(date.getMonth())}`
+    spans[11].innerHTML = `${date.getHours()}:${date.getMinutes()}`
   }
 
 } else {

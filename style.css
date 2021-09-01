@@ -65,6 +65,14 @@ header {
   margin: 10px;
 }
 
+footer {
+  max-width: 60%;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  font-size: 1.5em;
+  font-style: italic;
+}
+
 /* responsive */
 @media only screen and (max-width: 1000px) {
   main {
