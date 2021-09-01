@@ -2,6 +2,7 @@ console.log('Working!')
 const pDevice = document.getElementById('device-info')
 const divWeatherInfo = document.getElementById('wather-info')
 const imgWeather = document.getElementById('weather-icon')
+const mainTag = document.getElementsByTagName('main')[0]
 
 if ('geolocation' in navigator) {
   // it is compatible
@@ -29,7 +30,7 @@ if ('geolocation' in navigator) {
   function callBackError({code, message}) {
     console.log('Error code:', code)
     console.log('Message:', message)
-    pDevice.innerHTML = `Error code: ${code} <br/> Message: ${message} </br> Please, turn on the localization and allowed this site.`
+    pDevice.innerHTML = `Error code: ${code} <br/> Message: ${message} </br> Please, turn on the localization and allow this site.`
   }
   
   // primisses functions
@@ -51,7 +52,7 @@ if ('geolocation' in navigator) {
     } else if (deg >= 67 && deg < 90) {
       cord = 'ENE'
     } else if (deg >= 90 && deg < 112.5) {
-      cord: 'E'
+      cord = 'E'
     } else if (deg >= 112.5 && deg < 135) {
       cord = 'ESE'
     } else if (deg >= 135 && deg < 157.5) {
@@ -93,8 +94,7 @@ if ('geolocation' in navigator) {
     const {speed, deg} = data.wind
 
     // "trying react"
-    divWeatherInfo.style.borderColor = '#297365'
-    imgWeather.src = 'weather.png'
+    mainTag.style.display = 'block'
     
     // insert information
     h1City.innerHTML = `${data.name}, ${country}`
