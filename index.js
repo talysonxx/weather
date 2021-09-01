@@ -4,7 +4,7 @@ if ('geolocation' in navigator) {
   // it is compatible
   console.log('Great')
 
-  const apiKey = '9cf4f6d4e99e0075395476ce7c2f1aa7'
+  // const apiKey = '9cf4f6d4e99e0075395476ce7c2f1aa7'
 
   // get html elements
   const h1City = document.getElementById('city')
@@ -17,7 +17,7 @@ if ('geolocation' in navigator) {
   // geolocation functions
   function getCurrentPosition({coords}) {
     console.log('User allowed')
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${apiKey}`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${process.env.WEATHER_API_KEY}`)
       .then(thenJson)
       .then(thenData)
   }
