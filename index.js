@@ -20,6 +20,8 @@ if ('geolocation' in navigator) {
 
   // geolocation functions
   function getCurrentPosition({coords}) {
+    // const language = (navigator.browserLanguage != undefined) ? navigator.browserLanguage : navigator.language;
+
     console.log('User allowed')
     pDevice.innerHTML = ''
 
