@@ -20,6 +20,8 @@ if ('geolocation' in navigator) {
   // geolocation functions
   function getCurrentPosition({coords}) {
     console.log('User allowed')
+    pDevice.innerHTML = ''
+
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coords.latitude}&lon=${coords.longitude}&appid=${apiKey}`)
       .then(thenJson)
       .then(thenData)
