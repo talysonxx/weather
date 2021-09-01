@@ -1,0 +1,62 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  color: #297365;
+}
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+/* font-family: 'Roboto Mono', monospace; */
+body {
+  background-color: #102540;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 10px;
+}
+#weather-icon {
+  width: 100px;
+}
+
+#wather-info {
+  margin-top: 20px;
+  padding: 5px;
+  border-left: 2px solid #297365;
+  display: inline-block;
+}
+#weather-main {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+#weather-description {
+  text-transform: capitalize;
+}
+
+#temp-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  margin: 10px 5px;
+  min-height: 120px;
+  font-size: 0.9em;
+}
+
+#coords {
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 0%; */
+  /* transform: translateY(-50%); */
+  float: right;
+  font-size: 0.8em;
+  margin-top: 25px;
+}
