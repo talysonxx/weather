@@ -1,5 +1,5 @@
 console.log('Working!')
-const pDevice = getElementById('device-info')
+const pDevice = document.getElementById('device-info')
 
 if ('geolocation' in navigator) {
   // it is compatible
