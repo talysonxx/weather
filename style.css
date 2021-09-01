@@ -11,8 +11,10 @@
 /* font-family: 'Roboto Mono', monospace; */
 body {
   background-color: #102540;
-  margin: 0 auto;
+}
+main {
   max-width: 60%;
+  margin: 0 auto;
 }
 
 header {
