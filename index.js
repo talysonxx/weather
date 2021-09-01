@@ -1,4 +1,5 @@
 console.log('Working!')
+const pDevice = getElementById('device-info')
 
 if ('geolocation' in navigator) {
   // it is compatible
@@ -24,6 +25,7 @@ if ('geolocation' in navigator) {
   function callBackError({code, message}) {
     console.log('Error code:', code)
     console.log('Message:', message)
+    pDevice.innerHTML = `Error code: ${code} <br/> Message: ${message}`
   }
   
   // primisses functions
@@ -104,6 +106,5 @@ if ('geolocation' in navigator) {
 
 } else {
   alert("I'm sorry, but your browser does not support this function.")
-  const pDevice = getElementById('device-info')
   pDevice.innerHTML = "I'm sorry, but your browser does not support this function."
 }
