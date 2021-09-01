@@ -1,5 +1,7 @@
 console.log('Working!')
 const pDevice = document.getElementById('device-info')
+const divWeatherInfo = document.getElementById('wather-info')
+const imgWeather = document.getElementById('weather-icon')
 
 if ('geolocation' in navigator) {
   // it is compatible
@@ -88,6 +90,10 @@ if ('geolocation' in navigator) {
     const {country} = data.sys
     const {speed, deg} = data.wind
 
+    // "trying react"
+    divWeatherInfo.style.borderColor = '#297365'
+    imgWeather.src = 'weather.png'
+    
     // insert information
     h1City.innerHTML = `${data.name}, ${country}`
     pDescription.innerHTML = description

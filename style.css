@@ -30,7 +30,8 @@ header {
 #wather-info {
   margin-top: 20px;
   padding: 5px;
-  border-left: 2px solid #297365;
+  /* border-left: 2px solid #297365; */
+  border-left: 2px solid transparent;
   display: inline-block;
 }
 #weather-main {
